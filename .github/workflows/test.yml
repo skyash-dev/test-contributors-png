@@ -19,4 +19,4 @@ jobs:
       - name: Generate contributors image on main branch
         uses: skyash-dev/all-contributors-image@v1
         with:
-          token: ${{ secrets.MY_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
