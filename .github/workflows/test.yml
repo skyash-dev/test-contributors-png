@@ -1,12 +1,13 @@
-name: Generate Contributors Image
+name: Generate Contributors PNG
 
 on:
   push:
     paths:
-      - .all-contributorsrc
+      - '.all-contributorsrc'
 
 jobs:
-  generate:
+  build:
+    if: github.ref == 'refs/heads/main' && github.repository == 'processing/p5.js'
     runs-on: ubuntu-latest
 
     permissions:
@@ -16,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate contributors image on main branch
+      - name: Generate contributors image
         uses: skyash-dev/all-contributors-image@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
