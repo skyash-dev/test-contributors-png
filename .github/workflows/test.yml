@@ -9,6 +9,8 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      - name: Install dependencies
+        run: npm install canvas
       - name: Generate contributors image on main branch
         uses: skyash-dev/all-contributors-image@v1
         with:
