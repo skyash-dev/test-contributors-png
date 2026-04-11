@@ -1,0 +1,15 @@
+name: Generate Contributors Image
+
+on:
+  push:
+    paths:
+      - .all-contributorsrc
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate contributors image on main branch
+        uses: skyash-dev/all-contributors-image@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
