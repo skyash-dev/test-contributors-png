@@ -13,4 +13,3 @@ jobs:
         uses: skyash-dev/all-contributors-image@e8d951fd5f8d2dece314395925cdc334486016ac
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          base-branch: develop
