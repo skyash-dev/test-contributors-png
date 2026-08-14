@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Generate contributors image on main branch
-        uses: skyash-dev/all-contributors-image@ed20564643cd82f042d5d86124f7ff4a05a0213a
+        uses: skyash-dev/all-contributors-image@e8d951fd5f8d2dece314395925cdc334486016ac
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          base-branch: "develop"
